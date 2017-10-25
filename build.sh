@@ -19,7 +19,10 @@ esac
 
 image_name=kube-yaml-cleaner
 
+# Build image with binary
 docker build --build-arg "GOOS=$GOOS" --build-arg "GOARCH=$GOARCH" -t $image_name .
+
+# Copy out binary to host
 container_id=$(docker create $image_name)
 docker cp $container_id:/kube-yaml-cleaner .
 docker rm $container_id
