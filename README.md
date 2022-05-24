@@ -1,4 +1,4 @@
-# kube-yaml-cleaner
+# kube-yaml-formatter
 
 Reformats YAML as Kubernetes does
 
